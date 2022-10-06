@@ -46,7 +46,7 @@ uint8_t SensorParser::string_to_bytes(std::string const & bytes, size_t & index)
 float SensorParser::bytes_to_float(std::string const & bytes, size_t & index)
 {
     size_t CHARS = 4;
-    auto * b = new uint8_t [CHARS];
+    uint8_t b[CHARS];
     for (size_t i = 0; i < CHARS; ++i) {
         b[CHARS - i - 1] = string_to_bytes(bytes, index);
     }
